@@ -1,0 +1,12 @@
+. {
+    etcd {
+      path /skydns
+      endpoint http://etcd:2379
+      upstream /etc/resolv.conf
+    }
+    cache 160
+    reload 10s
+    health
+    log
+    errors
+}
